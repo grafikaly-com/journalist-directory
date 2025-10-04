@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "id": 1458,
+      "name": "03 Magazine",
+      "url": "https://03magazine.co.nz/",
+      "lastUpdated": "2023-09-05",
+      "mediaTypes": ["WEB"],
+      "readership": 35000,
+      "pageParser": "DEFAULT",
+      "tags": [
+        {
+          "id": 5,
+          "name": "Lifestyle",
+          "purpose": "Consumer"
+        },
+        {
+          "id": 101,
+          "name": "Tier 5",
+          "purpose": "Analysis"
+        }
+      ],
+      "suggestedTags": [],
+      "countries": [
+        {
+          "id": 2,
+          "name": "New Zealand",
+          "code": "NZ",
+          "enabled": true
+        }
+      ],
+      "domiciledRegions": [
+        {
+          "id": 33,
+          "name": "National",
+          "country": "New Zealand",
+          "enabled": true
+        }
+      ],
+      "regions": [
+        {
+          "id": 33,
+          "name": "National",
+          "country": "New Zealand",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": 1459,
+      "name": "04 Magazine",
+      "url": "https://03magazine.co.nz/",
+      "lastUpdated": "2023-09-05",
+      "mediaTypes": ["WEB"],
+      "readership": 35000,
+      "pageParser": "DEFAULT",
+      "tags": [
+        {
+          "id": 5,
+          "name": "Lifestyle",
+          "purpose": "Consumer"
+        },
+        {
+          "id": 101,
+          "name": "Tier 5",
+          "purpose": "Analysis"
+        }
+      ],
+      "suggestedTags": [],
+      "countries": [
+        {
+          "id": 2,
+          "name": "New Zealand",
+          "code": "NZ",
+          "enabled": true
+        }
+      ],
+      "domiciledRegions": [
+        {
+          "id": 33,
+          "name": "National",
+          "country": "New Zealand",
+          "enabled": true
+        }
+      ],
+      "regions": [
+        {
+          "id": 33,
+          "name": "National",
+          "country": "New Zealand",
+          "enabled": true
+        }
+      ]
+    }
+  ],
+  "totalItems": 2,
+  "totalPages": 1,
+  "currentPage": 0,
+  "size": 20,
+  "next": true,
+  "previous": false
+}
