@@ -1,0 +1,9 @@
+export { PublicationMediaTypeModule } from './v1/publication-media-type/publication-media-type.module';
+export { PublicationTierModule } from './v1/publication-tier/publication-tier.module';
+export { PublicationModule } from './v1/publication/publication.module';
+export { RegionModule } from './v1/region/region.module';
+export { FormatTypeModule } from './v2/format-type/format-type.module';
+export { JournalistSearchModule } from './v2/journalist-search/journalist-search.module';
+export { JournalistModule } from './v2/journalist/journalist.module';
+export { NewsTypeModule } from './v2/news-type/news-type.module';
+export { RoleTypeModule } from './v2/role-type/role-type.module';
