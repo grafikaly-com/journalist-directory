@@ -1,0 +1,20 @@
+{
+  "name": "journalist-directory-deployment",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "prisma:init": "prisma init",
+    "prisma:generate": "prisma generate",
+    "prisma:generate:mediamine": "prisma generate --schema ./prisma/schema.mediamine.prisma",
+    "prisma:db:pull": "prisma db pull",
+    "prisma:db:pull:mediamine": "prisma db pull --schema ./prisma/schema.mediamine.prisma",
+    "prisma:db:push:mediamine": "prisma db push --schema ./prisma/schema.mediamine.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "prisma": "^5.20.0"
+  }
+}

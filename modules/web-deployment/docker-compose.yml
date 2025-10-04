@@ -1,0 +1,70 @@
+name: mediamine-web
+services:
+  web-ui:
+    image: mediamine/web-ui:latest
+    container_name: mediamine-web-ui
+    ports:
+      - '3000:3000'
+    restart: always
+
+  web-api:
+    image: mediamine/web-api:latest
+    container_name: mediamine-web-api
+    ports:
+      - '3002:3002'
+    volumes:
+      - ./certs/:/etc/nestjs/ssl
+      - ./nestjs/logs/:/usr/src/app/logs
+    restart: always
+
+  nginx:
+    image: mediamine/nginx:latest
+    container_name: mediamine-web-nginx
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./conf/:/etc/nginx/conf.d
+      - ./certs/:/etc/nginx/ssl
+      - ./logs/:/var/logs/nginx/localhost/
+    restart: always
+
+  mediamine-web-db-legacy:
+    image: postgres:16.4
+    container_name: mediamine-web-db-legacy
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: mediamine
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata-legacy:/var/lib/postgresql/data
+      - ./setup/db-legacy:/docker-entrypoint-initdb.d/
+    networks:
+      - mediamine-network
+    restart: always
+
+  mediamine-web-db:
+    image: postgres:17.2
+    container_name: mediamine-web-db
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_DB: mediamine
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./setup/db:/docker-entrypoint-initdb.d/
+    networks:
+      - mediamine-network
+    restart: always
+
+volumes:
+  pgdata-legacy:
+  pgdata:
+
+networks:
+  mediamine-network:
+    driver: bridge
